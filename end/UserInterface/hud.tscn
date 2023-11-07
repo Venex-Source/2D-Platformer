@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://c60dovlbpwlby"]
+
+[ext_resource type="Script" path="res://UserInterface/hud.gd" id="1_jm052"]
+[ext_resource type="PackedScene" uid="uid://cmblqe6t82d2w" path="res://UserInterface/Cherry.tscn" id="1_w4ght"]
+[ext_resource type="Texture2D" uid="uid://b45sj0hyt71pj" path="res://assets/Sprites/Characters/gem/gem-1.png" id="2_3d0s5"]
+[ext_resource type="FontFile" uid="uid://qrejtqpxlc8u" path="res://assets/Others/Kenney Bold.ttf" id="3_aqb1h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pelfa"]
+font = ExtResource("3_aqb1h")
+font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="VBoxContainer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -365.0
+offset_top = 24.0
+offset_right = -32.0
+offset_bottom = 134.0
+grow_horizontal = 0
+script = ExtResource("1_jm052")
+
+[node name="HealthBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+
+[node name="Cherry" parent="HealthBoxContainer" instance=ExtResource("1_w4ght")]
+layout_mode = 2
+
+[node name="Cherry2" parent="HealthBoxContainer" instance=ExtResource("1_w4ght")]
+layout_mode = 2
+
+[node name="Cherry3" parent="HealthBoxContainer" instance=ExtResource("1_w4ght")]
+layout_mode = 2
+
+[node name="CoinContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="CoinContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_3d0s5")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CoinContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+label_settings = SubResource("LabelSettings_pelfa")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bueuwtuv8bfal"]
+
+[ext_resource type="Texture2D" uid="uid://du2l05ksty1d4" path="res://assets/Sprites/props/block.png" id="1_1t14l"]
+[ext_resource type="PackedScene" uid="uid://b3a3hspmr122j" path="res://Props/Platforms/Pushable/base_pushable_platform.tscn" id="1_1tb0n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qphdt"]
+size = Vector2(16, 16)
+
+[node name="BlockPushablePlatform" instance=ExtResource("1_1tb0n")]
+move_speed = 20.0
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("1_1t14l")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_qphdt")

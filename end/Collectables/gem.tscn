@@ -1,0 +1,46 @@
+[gd_scene load_steps=10 format=3 uid="uid://vug2hj4ifnrd"]
+
+[ext_resource type="PackedScene" uid="uid://e2yqaebj27r1" path="res://Collectables/base_collectable.tscn" id="1_s40vt"]
+[ext_resource type="Script" path="res://Collectables/Gem.gd" id="2_r7rhh"]
+[ext_resource type="Texture2D" uid="uid://b45sj0hyt71pj" path="res://assets/Sprites/Characters/gem/gem-1.png" id="3_xwjaj"]
+[ext_resource type="Texture2D" uid="uid://dklreep5v6owx" path="res://assets/Sprites/Characters/gem/gem-2.png" id="4_rhg6m"]
+[ext_resource type="Texture2D" uid="uid://c7vejxr6s6t7y" path="res://assets/Sprites/Characters/gem/gem-3.png" id="5_45cnb"]
+[ext_resource type="Texture2D" uid="uid://b32j7dlmso5ag" path="res://assets/Sprites/Characters/gem/gem-4.png" id="6_4qmyk"]
+[ext_resource type="Texture2D" uid="uid://dhtu41vyt1pst" path="res://assets/Sprites/Characters/gem/gem-5.png" id="7_aqwlj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gxfp2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xwjaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rhg6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_45cnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4qmyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_aqwlj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_37s3l"]
+radius = 6.08276
+
+[node name="Gem" instance=ExtResource("1_s40vt")]
+script = ExtResource("2_r7rhh")
+coin_value = 100
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_gxfp2")
+autoplay = "default"
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_37s3l")

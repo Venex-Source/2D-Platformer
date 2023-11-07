@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3a3hspmr122j"]
+
+[ext_resource type="Script" path="res://Props/Platforms/Pushable/base_pushable_platform.gd" id="1_iihwk"]
+
+[node name="BasePushablePlatform" type="CharacterBody2D"]
+script = ExtResource("1_iihwk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

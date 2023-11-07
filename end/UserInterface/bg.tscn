@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhfrkfc2ejp5t"]
+
+[ext_resource type="Texture2D" uid="uid://bqyc663g48tmd" path="res://assets/Sprites/HUD/back.png" id="1_pidp4"]
+[ext_resource type="Texture2D" uid="uid://c51ee18tixxij" path="res://assets/Sprites/HUD/middle.png" id="2_oiu8y"]
+
+[node name="BG" type="ParallaxBackground"]
+
+[node name="Sky" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sky"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_pidp4")
+centered = false
+
+[node name="Hills" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1232, 0)
+
+[node name="Hill1" type="Sprite2D" parent="Hills"]
+position = Vector2(2, 222)
+texture = ExtResource("2_oiu8y")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 176, 500)
+
+[node name="Hill2" type="Sprite2D" parent="Hills"]
+position = Vector2(178, 222)
+texture = ExtResource("2_oiu8y")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 176, 500)
+
+[node name="Hill3" type="Sprite2D" parent="Hills"]
+position = Vector2(354, 224)
+texture = ExtResource("2_oiu8y")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 176, 500)
+
+[node name="Hill4" type="Sprite2D" parent="Hills"]
+position = Vector2(530, 224)
+texture = ExtResource("2_oiu8y")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 176, 500)
+
+[node name="Hill5" type="Sprite2D" parent="Hills"]
+position = Vector2(706, 222)
+texture = ExtResource("2_oiu8y")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 176, 500)
+
+[node name="Hill6" type="Sprite2D" parent="Hills"]
+position = Vector2(882, 222)
+texture = ExtResource("2_oiu8y")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 176, 500)
+
+[node name="Hill7" type="Sprite2D" parent="Hills"]
+position = Vector2(1058, 222)
+texture = ExtResource("2_oiu8y")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 176, 500)

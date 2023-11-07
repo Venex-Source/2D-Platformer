@@ -1,0 +1,136 @@
+[gd_scene load_steps=22 format=3 uid="uid://ckt56b0r56sll"]
+
+[ext_resource type="Texture2D" uid="uid://cpy0hi7f1f63k" path="res://assets/Sprites/Characters/player/jump/player-jump-2.png" id="1_6xvtp"]
+[ext_resource type="Script" path="res://Actors/player.gd" id="1_7dgss"]
+[ext_resource type="Texture2D" uid="uid://yj4avyrp0v22" path="res://assets/Sprites/Characters/player/run/player-run-1.png" id="1_ogavf"]
+[ext_resource type="Texture2D" uid="uid://cl0hin8d7kait" path="res://assets/Sprites/Characters/player/hurt/player-hurt-1.png" id="2_0prj8"]
+[ext_resource type="Texture2D" uid="uid://dkdpdks22mxjd" path="res://assets/Sprites/Characters/player/run/player-run-2.png" id="2_646h8"]
+[ext_resource type="Texture2D" uid="uid://cejmr235hrb2m" path="res://assets/Sprites/Characters/player/hurt/player-hurt-2.png" id="3_g1s0c"]
+[ext_resource type="Texture2D" uid="uid://bpurkx40skbys" path="res://assets/Sprites/Characters/player/run/player-run-3.png" id="3_ke5gw"]
+[ext_resource type="Texture2D" uid="uid://3flb1bvqpskf" path="res://assets/Sprites/Characters/player/idle/player-idle-1.png" id="4_8ft7d"]
+[ext_resource type="Texture2D" uid="uid://bxdh8rd2pdid2" path="res://assets/Sprites/Characters/player/run/player-run-4.png" id="4_17g4t"]
+[ext_resource type="Texture2D" uid="uid://c2b56jayhviw2" path="res://assets/Sprites/Characters/player/run/player-run-5.png" id="5_4yi5p"]
+[ext_resource type="Texture2D" uid="uid://cpes8q32lap58" path="res://assets/Sprites/Characters/player/idle/player-idle-2.png" id="5_yvoy8"]
+[ext_resource type="Texture2D" uid="uid://brorojvy0pr2e" path="res://assets/Sprites/Characters/player/idle/player-idle-3.png" id="6_badn1"]
+[ext_resource type="Texture2D" uid="uid://dfjt8uw8d7udj" path="res://assets/Sprites/Characters/player/run/player-run-6.png" id="6_t7ka4"]
+[ext_resource type="Texture2D" uid="uid://cby1lwli7u8pv" path="res://assets/Sprites/Characters/player/idle/player-idle-4.png" id="7_ixe2y"]
+[ext_resource type="Texture2D" uid="uid://xgyinbvseq7v" path="res://assets/Sprites/Characters/player/jump/player-jump-1.png" id="8_muyrj"]
+[ext_resource type="PackedScene" uid="uid://kktngreqjkox" path="res://Components/hit_box_component.tscn" id="16_xqcqs"]
+[ext_resource type="PackedScene" uid="uid://b5gugbvrilk8m" path="res://Components/hurt_box_component.tscn" id="17_tyw2w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d3x6c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6xvtp")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0prj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g1s0c")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_8ft7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yvoy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_badn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ixe2y")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_muyrj")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ogavf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_646h8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ke5gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_17g4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4yi5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_t7ka4")
+}],
+"loop": true,
+"name": &"run",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rvqtj"]
+radius = 7.0
+height = 24.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sch5j"]
+size = Vector2(13, 2)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_syf3k"]
+radius = 7.0
+height = 24.0
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_7dgss")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_d3x6c")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_rvqtj")
+
+[node name="HitBoxComponent" parent="." instance=ExtResource("16_xqcqs")]
+position = Vector2(-1, 14)
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
+self_modulate = Color(0.780392, 0, 0.807843, 1)
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_sch5j")
+
+[node name="HurtBoxComponent" parent="." instance=ExtResource("17_tyw2w")]
+collision_mask = 32
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBoxComponent"]
+visible = false
+modulate = Color(0.360784, 0.847059, 0.105882, 1)
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_syf3k")
+
+[node name="ReviveTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="ReviveTimer" to="." method="_on_revive_timer_timeout"]

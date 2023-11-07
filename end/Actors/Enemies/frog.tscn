@@ -1,0 +1,118 @@
+[gd_scene load_steps=16 format=3 uid="uid://dmtmwqaeiqo5x"]
+
+[ext_resource type="Texture2D" uid="uid://b17efgeoqtdoi" path="res://assets/Sprites/Characters/frog/jump/frog-jump-2.png" id="1_eodo8"]
+[ext_resource type="Script" path="res://Actors/Enemies/frog.gd" id="1_vywcv"]
+[ext_resource type="Texture2D" uid="uid://cgnvmsago88b1" path="res://assets/Sprites/Characters/frog/idle/frog-idle-1.png" id="2_fhgy6"]
+[ext_resource type="Texture2D" uid="uid://bwerc3m6il245" path="res://assets/Sprites/Characters/frog/idle/frog-idle-2.png" id="3_be7n7"]
+[ext_resource type="Texture2D" uid="uid://bnkf0i5p8egba" path="res://assets/Sprites/Characters/frog/idle/frog-idle-3.png" id="4_r40vh"]
+[ext_resource type="Texture2D" uid="uid://c26rf7odv5hpr" path="res://assets/Sprites/Characters/frog/idle/frog-idle-4.png" id="5_xtp78"]
+[ext_resource type="Texture2D" uid="uid://rmekhee7vpek" path="res://assets/Sprites/Characters/frog/jump/frog-jump-1.png" id="6_efi8r"]
+[ext_resource type="PackedScene" uid="uid://d36xic1t2gcbh" path="res://Components/attack_box_component.tscn" id="7_iqy5p"]
+[ext_resource type="PackedScene" uid="uid://kktngreqjkox" path="res://Components/hit_box_component.tscn" id="8_goqfn"]
+[ext_resource type="PackedScene" uid="uid://b5gugbvrilk8m" path="res://Components/hurt_box_component.tscn" id="9_ofkym"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5sicq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_eodo8")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fhgy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_be7n7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r40vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xtp78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fhgy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fhgy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fhgy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fhgy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fhgy6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_efi8r")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5hvn"]
+size = Vector2(24, 11)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sbamt"]
+radius = 66.0076
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6m0b"]
+size = Vector2(24, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxf7g"]
+size = Vector2(20, 17)
+
+[node name="Frog" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_vywcv")
+move_speed = 50.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5sicq")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_r5hvn")
+
+[node name="AttackBoxComponent" parent="." instance=ExtResource("7_iqy5p")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBoxComponent"]
+shape = SubResource("CircleShape2D_sbamt")
+
+[node name="HitBoxComponent" parent="." instance=ExtResource("8_goqfn")]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_p6m0b")
+debug_color = Color(1, 0.00392157, 0.0705882, 0.419608)
+
+[node name="HurtBoxComponent" parent="." instance=ExtResource("9_ofkym")]
+collision_mask = 16
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBoxComponent"]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_jxf7g")
+debug_color = Color(0.717647, 0.482353, 0, 0.419608)
+
+[node name="CoolTimer" type="Timer" parent="."]
+wait_time = 1.4
+one_shot = true
+
+[connection signal="chase_began" from="AttackBoxComponent" to="." method="_on_attack_box_component_chase_began"]
+[connection signal="chase_ended" from="AttackBoxComponent" to="." method="_on_attack_box_component_chase_ended"]
+[connection signal="timeout" from="CoolTimer" to="." method="_on_cool_timer_timeout"]

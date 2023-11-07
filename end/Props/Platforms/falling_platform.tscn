@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl0p6w3tnvpa4"]
+
+[ext_resource type="Texture2D" uid="uid://ti4xls4rxxdy" path="res://assets/Sprites/Tiles/tileset.png" id="1_2dhnt"]
+[ext_resource type="Script" path="res://Props/Platforms/falling_platform.gd" id="1_lp7cr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ge5ly"]
+size = Vector2(14, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1ltu"]
+size = Vector2(14, 16)
+
+[node name="FallingPlatform" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 0.4
+lock_rotation = true
+freeze = true
+script = ExtResource("1_lp7cr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2dhnt")
+region_enabled = true
+region_rect = Rect2(177, 160, 14, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ge5ly")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("RectangleShape2D_m1ltu")
+debug_color = Color(0.996078, 0, 0.196078, 0.419608)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

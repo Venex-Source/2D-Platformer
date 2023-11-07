@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://fj1tyjig8836"]
+
+[ext_resource type="Texture2D" uid="uid://d2funilgfmujx" path="res://assets/Sprites/props/house.png" id="1_pr3sf"]
+[ext_resource type="Script" path="res://Props/safe_house.gd" id="1_q56mf"]
+[ext_resource type="Texture2D" uid="uid://cmk7tf30ueurx" path="res://assets/Sprites/props/door-opened.png" id="2_t1lbq"]
+[ext_resource type="PackedScene" uid="uid://dinpppgyybxc5" path="res://UserInterface/fader.tscn" id="4_8lf40"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqedu"]
+size = Vector2(22, 33)
+
+[node name="SafeHouse" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+monitorable = false
+script = ExtResource("1_q56mf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pr3sf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(-10, 38)
+texture = ExtResource("2_t1lbq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-10, 37.5)
+shape = SubResource("RectangleShape2D_cqedu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="fader" parent="CanvasLayer" instance=ExtResource("4_8lf40")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

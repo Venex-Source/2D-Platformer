@@ -1,0 +1,33 @@
+[gd_scene load_steps=9 format=3 uid="uid://cmblqe6t82d2w"]
+
+[ext_resource type="Texture2D" uid="uid://dsxu0bnpr44en" path="res://assets/Sprites/Characters/cherry/cherry-1.png" id="1_e3j4n"]
+[ext_resource type="Texture2D" uid="uid://bd0ny8vyw4c7b" path="res://assets/Sprites/Characters/cherry/cherry-2.png" id="2_mi77t"]
+[ext_resource type="Texture2D" uid="uid://csvm7nwcasbn7" path="res://assets/Sprites/Characters/cherry/cherry-3.png" id="3_ec12f"]
+[ext_resource type="Texture2D" uid="uid://b6llf8dml0dxg" path="res://assets/Sprites/Characters/cherry/cherry-4.png" id="4_fma5l"]
+[ext_resource type="Texture2D" uid="uid://b5a3hoil4f8gr" path="res://assets/Sprites/Characters/cherry/cherry-5.png" id="5_3d708"]
+[ext_resource type="Texture2D" uid="uid://bg64rwh5k1h5q" path="res://assets/Sprites/Characters/cherry/cherry-6.png" id="6_xa8hy"]
+[ext_resource type="Texture2D" uid="uid://rflw1x310rfm" path="res://assets/Sprites/Characters/cherry/cherry-7.png" id="7_uabu0"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_r34bf"]
+frames = 7
+speed_scale = 1.5
+frame_0/texture = ExtResource("1_e3j4n")
+frame_1/texture = ExtResource("2_mi77t")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_ec12f")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_fma5l")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_3d708")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("6_xa8hy")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("7_uabu0")
+frame_6/duration = 1.0
+
+[node name="Cherry" type="TextureRect"]
+custom_minimum_size = Vector2(20, 20)
+size_flags_horizontal = 3
+texture = SubResource("AnimatedTexture_r34bf")
+expand_mode = 2
+stretch_mode = 5

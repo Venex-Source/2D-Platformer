@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://u1v1fejqgpl2"]
+
+[ext_resource type="PackedScene" uid="uid://dkuwmuf82fb20" path="res://Props/Spikes/base_spike.tscn" id="1_8kln0"]
+[ext_resource type="Texture2D" uid="uid://bh323uryilugo" path="res://assets/Sprites/props/spike-skull.png" id="2_dyh1k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmfr3"]
+size = Vector2(15, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2s4r"]
+size = Vector2(12, 7)
+
+[node name="SpikeSkull" instance=ExtResource("1_8kln0")]
+position = Vector2(0, 2)
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_dyh1k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent" index="0"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_gmfr3")
+debug_color = Color(0.921569, 0.278431, 0, 0.419608)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_i2s4r")
