@@ -36,7 +36,7 @@ func  _physics_process(delta):
 		velocity = Vector2.ZERO
 		cool_timer.start()
 
-func take_damage(amount, body) -> void:
+func take_damage(_amount, body) -> void:
 	if body.global_position.y > get_node("HurtBoxComponent").global_position.y:
 		return
 	die()

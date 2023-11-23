@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var next_level: String
+@export var next_level: PackedScene
 
 
 func _on_body_entered(body):
@@ -8,7 +8,7 @@ func _on_body_entered(body):
 		$CanvasLayer/fader.fade_screen(true, change_level)
 
 func change_level():
-	get_tree().change_scene_to_file(next_level)
+	get_tree().change_scene_to_packed(next_level)
 
 func _get_configuration_warnings():
-	return "Next Level is empty" if next_level.is_empty() else ""
+	return "ERR! Next level scene is empty" if not next_level else ""

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhfrkfc2ejp5t"]
 
-[ext_resource type="Texture2D" uid="uid://bqyc663g48tmd" path="res://assets/Sprites/HUD/back.png" id="1_pidp4"]
-[ext_resource type="Texture2D" uid="uid://c51ee18tixxij" path="res://assets/Sprites/HUD/middle.png" id="2_oiu8y"]
+[ext_resource type="Texture2D" uid="uid://bvdglaw30jrnk" path="res://assets/Sprites/HUD/back.png" id="1_pidp4"]
+[ext_resource type="Texture2D" uid="uid://c2ss8wgnti7un" path="res://assets/Sprites/HUD/middle.png" id="2_oiu8y"]
 
 [node name="BG" type="ParallaxBackground"]
 

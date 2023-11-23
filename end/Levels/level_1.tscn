@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cu5qisaeh4c6s"]
+[gd_scene load_steps=20 format=3 uid="uid://cu5qisaeh4c6s"]
 
 [ext_resource type="TileSet" uid="uid://b8ollnpu1av3u" path="res://assets/Others/world.tres" id="1_4imm3"]
 [ext_resource type="PackedScene" uid="uid://kktngreqjkox" path="res://Components/hit_box_component.tscn" id="1_pgs57"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bueuwtuv8bfal" path="res://Props/Platforms/Pushable/block_pushable_platform.tscn" id="7_ty7f8"]
 [ext_resource type="PackedScene" uid="uid://bp133lbf78o5x" path="res://Props/Platforms/movable_platform.tscn" id="8_bsc3j"]
 [ext_resource type="PackedScene" uid="uid://vug2hj4ifnrd" path="res://Collectables/gem.tscn" id="8_g5gd4"]
+[ext_resource type="PackedScene" uid="uid://ceurhyy16x5tf" path="res://Levels/level_2.tscn" id="13_v60tb"]
 [ext_resource type="PackedScene" uid="uid://fj1tyjig8836" path="res://Props/safe_house.tscn" id="13_w5jpp"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dyv1n"]
@@ -159,7 +160,7 @@ position = Vector2(576, 325)
 
 [node name="SafeHouse" parent="." instance=ExtResource("13_w5jpp")]
 position = Vector2(1234, 250)
-next_level = "res://Levels/level_2.tscn"
+next_level = ExtResource("13_v60tb")
 
 [node name="Player" parent="." instance=ExtResource("2_66qul")]
 position = Vector2(65, 288)

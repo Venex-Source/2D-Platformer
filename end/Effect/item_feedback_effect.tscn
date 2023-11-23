@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://bot70eh22qf1i"]
 
-[ext_resource type="Texture2D" uid="uid://8g1ma2phe00c" path="res://assets/Sprites/Characters/item-feedback/item-feedback-1.png" id="1_eysqj"]
+[ext_resource type="Texture2D" uid="uid://0wg80sntsadq" path="res://assets/Sprites/Characters/item-feedback/item-feedback-1.png" id="1_eysqj"]
 [ext_resource type="Script" path="res://Effect/base_effect.gd" id="1_h2tk8"]
-[ext_resource type="Texture2D" uid="uid://vpk2q6g3s572" path="res://assets/Sprites/Characters/item-feedback/item-feedback-2.png" id="2_4scgi"]
-[ext_resource type="Texture2D" uid="uid://ea1c5prgbu0o" path="res://assets/Sprites/Characters/item-feedback/item-feedback-3.png" id="3_6q2x6"]
-[ext_resource type="Texture2D" uid="uid://c1ilshira5ps0" path="res://assets/Sprites/Characters/item-feedback/item-feedback-4.png" id="4_4mvw4"]
+[ext_resource type="Texture2D" uid="uid://m2311rrqt3it" path="res://assets/Sprites/Characters/item-feedback/item-feedback-2.png" id="2_4scgi"]
+[ext_resource type="Texture2D" uid="uid://b4qw1xjca6ikq" path="res://assets/Sprites/Characters/item-feedback/item-feedback-3.png" id="3_6q2x6"]
+[ext_resource type="Texture2D" uid="uid://cahm7vnb5l6la" path="res://assets/Sprites/Characters/item-feedback/item-feedback-4.png" id="4_4mvw4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4rrv6"]
 animations = [{

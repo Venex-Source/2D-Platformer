@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://e2yqaebj27r1" path="res://Collectables/base_collectable.tscn" id="1_s40vt"]
 [ext_resource type="Script" path="res://Collectables/Gem.gd" id="2_r7rhh"]
-[ext_resource type="Texture2D" uid="uid://b45sj0hyt71pj" path="res://assets/Sprites/Characters/gem/gem-1.png" id="3_xwjaj"]
-[ext_resource type="Texture2D" uid="uid://dklreep5v6owx" path="res://assets/Sprites/Characters/gem/gem-2.png" id="4_rhg6m"]
-[ext_resource type="Texture2D" uid="uid://c7vejxr6s6t7y" path="res://assets/Sprites/Characters/gem/gem-3.png" id="5_45cnb"]
-[ext_resource type="Texture2D" uid="uid://b32j7dlmso5ag" path="res://assets/Sprites/Characters/gem/gem-4.png" id="6_4qmyk"]
-[ext_resource type="Texture2D" uid="uid://dhtu41vyt1pst" path="res://assets/Sprites/Characters/gem/gem-5.png" id="7_aqwlj"]
+[ext_resource type="Texture2D" uid="uid://b720twjxdbo58" path="res://assets/Sprites/Characters/gem/gem-1.png" id="3_xwjaj"]
+[ext_resource type="Texture2D" uid="uid://b4qa77jqdc7ta" path="res://assets/Sprites/Characters/gem/gem-2.png" id="4_rhg6m"]
+[ext_resource type="Texture2D" uid="uid://ccsj6f73q3c18" path="res://assets/Sprites/Characters/gem/gem-3.png" id="5_45cnb"]
+[ext_resource type="Texture2D" uid="uid://43l4iowdtogy" path="res://assets/Sprites/Characters/gem/gem-4.png" id="6_4qmyk"]
+[ext_resource type="Texture2D" uid="uid://dm6tjauqqa71i" path="res://assets/Sprites/Characters/gem/gem-5.png" id="7_aqwlj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gxfp2"]
 animations = [{

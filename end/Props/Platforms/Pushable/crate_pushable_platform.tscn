@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://gv50a10u3m4j"]
 
 [ext_resource type="PackedScene" uid="uid://b3a3hspmr122j" path="res://Props/Platforms/Pushable/base_pushable_platform.tscn" id="1_y78fr"]
-[ext_resource type="Texture2D" uid="uid://d06u4wyu8f5om" path="res://assets/Sprites/props/crate.png" id="2_j6n5x"]
+[ext_resource type="Texture2D" uid="uid://b6gljtyd7x6q4" path="res://assets/Sprites/props/crate.png" id="2_j6n5x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xmc2"]
 size = Vector2(16, 16)

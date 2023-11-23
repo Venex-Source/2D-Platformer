@@ -1,13 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://bh4p16k466veh"]
+[gd_scene load_steps=14 format=3 uid="uid://duupjy5cgfgcj"]
 
 [ext_resource type="Script" path="res://MainScreen/main_screen.gd" id="1_df5r5"]
 [ext_resource type="TileSet" uid="uid://b8ollnpu1av3u" path="res://assets/Others/world.tres" id="2_147ek"]
+[ext_resource type="PackedScene" uid="uid://cu5qisaeh4c6s" path="res://Levels/level_1.tscn" id="2_u7prs"]
 [ext_resource type="PackedScene" uid="uid://b0wffos4ripsm" path="res://Props/Spikes/spike_bottom.tscn" id="3_mu6tb"]
 [ext_resource type="PackedScene" uid="uid://u1v1fejqgpl2" path="res://Props/Spikes/spike_skull.tscn" id="4_dhagp"]
 [ext_resource type="PackedScene" uid="uid://dl4xogpvd3ncb" path="res://Props/Spikes/spike_top.tscn" id="5_hhhep"]
 [ext_resource type="PackedScene" uid="uid://dhfrkfc2ejp5t" path="res://UserInterface/bg.tscn" id="6_paulv"]
-[ext_resource type="Texture2D" uid="uid://dl5yqy00avtxx" path="res://assets/Sprites/HUD/title-screen.png" id="7_ilr83"]
-[ext_resource type="Texture2D" uid="uid://bcocfxybgnjtr" path="res://assets/Sprites/HUD/press-enter-text.png" id="8_2yk0r"]
+[ext_resource type="Texture2D" uid="uid://b2rtovuwuphm2" path="res://assets/Sprites/HUD/title-screen.png" id="7_ilr83"]
+[ext_resource type="Texture2D" uid="uid://yb5jor5aatfs" path="res://assets/Sprites/HUD/press-enter-text.png" id="8_2yk0r"]
 [ext_resource type="PackedScene" uid="uid://dinpppgyybxc5" path="res://UserInterface/fader.tscn" id="9_xgyeg"]
 
 [sub_resource type="Animation" id="Animation_2jqei"]
@@ -97,6 +98,7 @@ _data = {
 
 [node name="MainScreen" type="Node2D"]
 script = ExtResource("1_df5r5")
+next_level = ExtResource("2_u7prs")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(560, 504)

@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://jjxsloduo4a3"]
 
-[ext_resource type="Texture2D" uid="uid://boyw4gin0dcea" path="res://assets/Sprites/Characters/enemy-death/enemy-death-1.png" id="1_74msv"]
-[ext_resource type="Texture2D" uid="uid://cchbyfg2v6cue" path="res://assets/Sprites/Characters/enemy-death/enemy-death-2.png" id="2_2hvmg"]
-[ext_resource type="Texture2D" uid="uid://btd23n75jiu03" path="res://assets/Sprites/Characters/enemy-death/enemy-death-3.png" id="3_a723y"]
-[ext_resource type="Texture2D" uid="uid://cpj3am2sl3qsh" path="res://assets/Sprites/Characters/enemy-death/enemy-death-4.png" id="4_14wbt"]
-[ext_resource type="Texture2D" uid="uid://dsuraqk5vnu27" path="res://assets/Sprites/Characters/enemy-death/enemy-death-5.png" id="5_lfm8s"]
-[ext_resource type="Texture2D" uid="uid://b5kuaunhmm3so" path="res://assets/Sprites/Characters/enemy-death/enemy-death-6.png" id="6_uhslh"]
+[ext_resource type="Texture2D" uid="uid://bjen6cnlk24oi" path="res://assets/Sprites/Characters/enemy-death/enemy-death-1.png" id="1_74msv"]
+[ext_resource type="Texture2D" uid="uid://ye0upwn6ffq0" path="res://assets/Sprites/Characters/enemy-death/enemy-death-2.png" id="2_2hvmg"]
+[ext_resource type="Texture2D" uid="uid://q7kc8n7i3suu" path="res://assets/Sprites/Characters/enemy-death/enemy-death-3.png" id="3_a723y"]
+[ext_resource type="Texture2D" uid="uid://nhruvd5r3oia" path="res://assets/Sprites/Characters/enemy-death/enemy-death-4.png" id="4_14wbt"]
+[ext_resource type="Texture2D" uid="uid://20r7d3aqcpul" path="res://assets/Sprites/Characters/enemy-death/enemy-death-5.png" id="5_lfm8s"]
+[ext_resource type="Texture2D" uid="uid://cooupucdpmcl5" path="res://assets/Sprites/Characters/enemy-death/enemy-death-6.png" id="6_uhslh"]
 [ext_resource type="Script" path="res://Effect/base_effect.gd" id="7_hqvbe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fu4xd"]

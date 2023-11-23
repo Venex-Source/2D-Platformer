@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dl4xogpvd3ncb"]
 
 [ext_resource type="PackedScene" uid="uid://dkuwmuf82fb20" path="res://Props/Spikes/base_spike.tscn" id="1_br8o5"]
-[ext_resource type="Texture2D" uid="uid://du4n2n6jekttm" path="res://assets/Sprites/props/spikes-top.png" id="2_guibb"]
+[ext_resource type="Texture2D" uid="uid://ivqvepn3g71g" path="res://assets/Sprites/props/spikes-top.png" id="2_guibb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8v4n"]
 size = Vector2(15, 9)

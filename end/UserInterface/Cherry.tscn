@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://cmblqe6t82d2w"]
 
-[ext_resource type="Texture2D" uid="uid://dsxu0bnpr44en" path="res://assets/Sprites/Characters/cherry/cherry-1.png" id="1_e3j4n"]
-[ext_resource type="Texture2D" uid="uid://bd0ny8vyw4c7b" path="res://assets/Sprites/Characters/cherry/cherry-2.png" id="2_mi77t"]
-[ext_resource type="Texture2D" uid="uid://csvm7nwcasbn7" path="res://assets/Sprites/Characters/cherry/cherry-3.png" id="3_ec12f"]
-[ext_resource type="Texture2D" uid="uid://b6llf8dml0dxg" path="res://assets/Sprites/Characters/cherry/cherry-4.png" id="4_fma5l"]
-[ext_resource type="Texture2D" uid="uid://b5a3hoil4f8gr" path="res://assets/Sprites/Characters/cherry/cherry-5.png" id="5_3d708"]
-[ext_resource type="Texture2D" uid="uid://bg64rwh5k1h5q" path="res://assets/Sprites/Characters/cherry/cherry-6.png" id="6_xa8hy"]
-[ext_resource type="Texture2D" uid="uid://rflw1x310rfm" path="res://assets/Sprites/Characters/cherry/cherry-7.png" id="7_uabu0"]
+[ext_resource type="Texture2D" uid="uid://da3484py66pin" path="res://assets/Sprites/Characters/cherry/cherry-1.png" id="1_e3j4n"]
+[ext_resource type="Texture2D" uid="uid://dbs0rdatyh4x1" path="res://assets/Sprites/Characters/cherry/cherry-2.png" id="2_mi77t"]
+[ext_resource type="Texture2D" uid="uid://baad7pojnq5xk" path="res://assets/Sprites/Characters/cherry/cherry-3.png" id="3_ec12f"]
+[ext_resource type="Texture2D" uid="uid://femiwvmwlv32" path="res://assets/Sprites/Characters/cherry/cherry-4.png" id="4_fma5l"]
+[ext_resource type="Texture2D" uid="uid://bqxosde2iq51i" path="res://assets/Sprites/Characters/cherry/cherry-5.png" id="5_3d708"]
+[ext_resource type="Texture2D" uid="uid://bkgrhflqlve1l" path="res://assets/Sprites/Characters/cherry/cherry-6.png" id="6_xa8hy"]
+[ext_resource type="Texture2D" uid="uid://da41umcpxbajv" path="res://assets/Sprites/Characters/cherry/cherry-7.png" id="7_uabu0"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_r34bf"]
 frames = 7

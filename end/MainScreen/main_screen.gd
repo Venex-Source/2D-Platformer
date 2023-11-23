@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var next_level: PackedScene
+
 @onready var fader = $CanvasLayer/fader
 
 func _input(event):
@@ -11,4 +13,7 @@ func _input(event):
 			fader.fade_screen(true, change_level)
 
 func change_level():
-	get_tree().change_scene_to_file("res://Levels/level_1.tscn")
+	get_tree().change_scene_to_packed(next_level)
+
+func _get_configuration_warnings():
+	return "ERR! Next level scene is empty" if not next_level else ""

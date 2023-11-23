@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://UserInterface/hud.gd" id="1_jm052"]
 [ext_resource type="PackedScene" uid="uid://cmblqe6t82d2w" path="res://UserInterface/Cherry.tscn" id="1_w4ght"]
-[ext_resource type="Texture2D" uid="uid://b45sj0hyt71pj" path="res://assets/Sprites/Characters/gem/gem-1.png" id="2_3d0s5"]
-[ext_resource type="FontFile" uid="uid://qrejtqpxlc8u" path="res://assets/Others/Kenney Bold.ttf" id="3_aqb1h"]
+[ext_resource type="Texture2D" uid="uid://b720twjxdbo58" path="res://assets/Sprites/Characters/gem/gem-1.png" id="2_3d0s5"]
+[ext_resource type="FontFile" uid="uid://bkyfhtev05gox" path="res://assets/Others/Kenney Bold.ttf" id="3_aqb1h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pelfa"]
 font = ExtResource("3_aqb1h")

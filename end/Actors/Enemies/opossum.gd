@@ -10,8 +10,10 @@ const RUN_SPEED = 70.0
 const FRAME_SPEED_SCALE = 0.5
 
 func _ready():
+	randomize()
 	animated_sprite_2d.speed_scale = 1.0
-	velocity.x = WALK_SPEED * (-1 if randi_range(0, 1) else 1)
+	velocity.x = WALK_SPEED
+	animation_player.play("move_right")
 
 func _on_attack_box_component_chase_began(new_direction):
 	animated_sprite_2d.speed_scale += FRAME_SPEED_SCALE
@@ -31,7 +33,7 @@ func _physics_process(delta):
 	animation_player.play("move_right" if velocity.x > 0 else "move_left")
 	move_and_slide()
 
-func take_damage(amount, body) -> void:
+func take_damage(_amount, body) -> void:
 	if body.global_position.y > get_node("HurtBoxComponent").global_position.y:
 		return
 	die()
