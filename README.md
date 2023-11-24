@@ -16,7 +16,7 @@ Feel free to [ open an issue ]() and submit a Pull Request if you find bugs!
 2. Download the [project file]() for the tutorial.
 3. Open up the Godot Engine and import the **start** project file. <p></p>
 
-We also recommend having a basic understanding of GDScript and a fundamentals of the godot engine. Checkout the [Your First 2D Game]() in the official Godot docs, if you haven't already.
+We also recommend having a basic understanding of GDScript and a fundamentals of the godot engine. Checkout the [Your First 2D Game](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html) in the official Godot docs, if you haven't already.
 
 ## Features
 ### Player
