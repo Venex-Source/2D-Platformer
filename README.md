@@ -39,7 +39,7 @@ A basic platformer character that has the ability to:
 **Jump** - Space bar
 
 ## Other Links
-1. [Learn Godot Inheritance]()
+1. [Introduction to Inheritance in Godot in 5 Minutes](https://youtu.be/1M2k1BoNnXA)
 2. [Learn these 4 2D Platforms]() <p></p>
 **Check out my YouTube Channel** [Venex Source](https://www.youtube.com/@venex_source)
 
