@@ -9,7 +9,7 @@ Godot 2D adventure platformer demo of Sunny Land. [Watch full tutorial video on 
 - Learn these two concept **Inheritance** and **Composition**(Components), and how harness them and create better games.
 - Design a title screen, a health and coin counter and a lot more.
 
-Feel free to [ open an issue ]() and submit a Pull Request if you find bugs!
+Feel free to [ open an issue ](https://github.com/venex-source/godot-2D-adventure-platformer/issues) and submit a Pull Request if you find bugs!
 
 ## How to get started
 1. Download and Install the [Godot Engine](https://godotengine.org/) **(v.4.0 and above)**.
