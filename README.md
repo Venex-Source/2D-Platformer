@@ -1,12 +1,12 @@
 # Godot 2D adventure platformer demo
 ![](Banner.png)
-Godot 2D adventure platformer demo of Sunny Land. [Watch full tutorial video on YouTube]()! <p></p>
+Godot 2D adventure platformer demo of Sunny Land. [Watch full tutorial video on YouTube](https://youtu.be/vSwJulHbCW8)! <p></p>
 ➡ Follow me on [Twitter](https://twitter.com/VenexSource) and [YouTube](https://www.youtube.com/@venex_source) for more godot game tutorials, and more!
 
 ## What you'll learn
 - Build a platform game with connected levels, player, enemies, coins, level transition...
 - Basic AI enemy that chase the player and avoids danger like Spikes
-- Learn these two concept **Inheritance** and **Composition**(Components), and how harness them and create better games.
+- Learn these two concept **Inheritance** and **Composition**(Components), and how to harness them and create better games.
 - Design a title screen, a health and coin counter and a lot more.
 
 Feel free to [ open an issue ](https://github.com/venex-source/godot-2D-adventure-platformer/issues) and submit a Pull Request if you find bugs!
